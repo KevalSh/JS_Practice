@@ -64,3 +64,29 @@ console.log("this is the addition of 3 numbers", addThree(1,2,3));
     // named IIFE
 }) ();
 
+let numArray = [100, 200, 300, 400 , 500 , 600]
+
+for (let i = 0; i < 3; i++) {
+    const element = numArray[i];
+    console.log(element);
+    console.log(typeof element);
+}
+
+// let score = 0;
+
+// do {
+//     console.log (`The score is ${score}`);
+//     score++;
+// } while (score <= 10);
+
+function user (username, isLoggedin) {
+    this.username = username;
+    this.isLoggedin = isLoggedin;
+
+    return this;
+}
+
+let userOne = new user("Mavrick", true);  // writing new keyword is important here as it will create new instance
+let userTwo = new user("Tony", false); // creating instance will create new copy therefore the value of original object literal will not change
+let userThree = new user("Renish", true);
+console.log(userTwo);
