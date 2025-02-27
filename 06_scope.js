@@ -80,13 +80,25 @@ for (let i = 0; i < 3; i++) {
 // } while (score <= 10);
 
 function user (username, isLoggedin) {
-    this.username = username;
-    this.isLoggedin = isLoggedin;
+    this.username = username;  // this.username will define variable or memory location
+    this.isLoggedin = isLoggedin;  // right hand side will be the argument
 
-    return this;
-}
+    return this;  // returning this keyword will allow access to the value.
+} // not writing return here, will also work as it is implicitly defined.
 
 let userOne = new user("Mavrick", true);  // writing new keyword is important here as it will create new instance
 let userTwo = new user("Tony", false); // creating instance will create new copy therefore the value of original object literal will not change
 let userThree = new user("Renish", true);
 console.log(userTwo);
+
+
+function multipleBy5 (num) {
+    return num * 5;
+}
+
+multipleBy5.power = 2;  // function working as an object as well.
+
+console.log(multipleBy5(5));
+console.log(multipleBy5.power);
+//console.log(multipleBy5.power(5));  // this will give error
+console.log(multipleBy5.prototype);
